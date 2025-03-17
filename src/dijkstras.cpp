@@ -3,7 +3,7 @@
 vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& previous) {
     int num = G.numVertices;
     vector<int> distance(num, INF);
-    previous.resize(num, -1);
+    previous.assign(num, -1);
     vector<bool> visited(num, false);
 
     struct Node {

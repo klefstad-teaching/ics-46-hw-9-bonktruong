@@ -132,15 +132,16 @@ void load_words(set<string>& word_list, const string& file_name) {
 
 void print_word_ladder(const vector<string>& ladder) {
     if (!ladder.empty()) {
+        cout << "Word ladder found: "
         for (size_t i = 0; i < ladder.size(); i++) {
             cout << ladder[i];
             if (i < ladder.size() - 1) {
-                cout << " -> ";
+                cout << " ";
             }
         }
         cout << endl;
     } else {
-        cout << "Word ladder empty!" << endl;
+        cout << "No word ladder found." << endl;
     }
 }
 
